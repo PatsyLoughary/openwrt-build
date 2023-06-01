@@ -18,7 +18,9 @@ jobs:
         run: git clone https://github.com/immortalwrt/immortalwrt.git
 
       - name: Copy .config file
-        run: cp openwrt-build/config immortalwrt/.config
+        run: |
+          ls 
+          cp openwrt-build/config immortalwrt/.config
 
       - name: Replace feeds.conf.default
         run: cp openwrt-build/feeds.conf.default immortalwrt/feeds.conf.default
