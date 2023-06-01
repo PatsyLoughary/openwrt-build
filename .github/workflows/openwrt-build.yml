@@ -20,10 +20,10 @@ jobs:
       - name: Copy .config file
         run: |
           ls 
-          cp openwrt-build/config immortalwrt/.config
+          cp config immortalwrt/.config
 
       - name: Replace feeds.conf.default
-        run: cp openwrt-build/feeds.conf.default immortalwrt/feeds.conf.default
+        run: cp feeds.conf.default immortalwrt/feeds.conf.default
 
       - name: Set up build environment
         run: sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh)'
